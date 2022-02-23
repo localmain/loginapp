@@ -1,5 +1,7 @@
 pipeline {
-   agent any
+   agent {
+   label 'papu'
+   }
    tools {
      maven "maven"  
    }
@@ -7,7 +9,7 @@ pipeline {
    stages {
       stage('Git Checkout') {
          steps {
-            git 'https://github.com/Chandandhani/loginapp.git'   
+            git 'https://github.com/localmain/demojenkins.git'   
          }
       }
 
@@ -16,14 +18,6 @@ pipeline {
          sh "mvn clean install package    " 
       }    
     }
-    stage ('Deploying Artifact'){
-      steps {
-        sh "mvn deploy "
-       }
-     
-     
-    }
-
-
+   
     }
 }
