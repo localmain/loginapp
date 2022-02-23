@@ -1,7 +1,5 @@
 pipeline {
    agent {
-      label 'papu'
-   }
    tools {
      maven "maven"  
    }
