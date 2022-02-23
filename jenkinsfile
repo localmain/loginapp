@@ -9,7 +9,7 @@ pipeline {
    stages {
       stage('Git Checkout') {
          steps {
-            git 'https://github.com/localmain/demojenkins.git'   
+            git 'https://github.com/localmain/loginapp.git'   
          }
       }
 
