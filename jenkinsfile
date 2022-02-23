@@ -1,11 +1,10 @@
 pipeline {
    agent {
-   label 'papu'
+      label 'papu'
    }
    tools {
      maven "maven"  
    }
-
    stages {
       stage('Git Checkout') {
          steps {
